@@ -4,7 +4,18 @@
 import sys
 import numpy as np
 
-def complexity(rcas):
+def complexity(rcas, drop=True):
+  
+  rcas_clone = rcas.copy()
+  
+  # drop columns / rows only if completely nan
+  rcas_clone = rcas_clone.dropna(how="all")
+  rcas_clone = rcas_clone.dropna(how="all", axis=1)
+  
+  if rcas_clone.shape != rcas.shape:
+    print "[Warning] RCAs contain columns or rows that are entirely comprised of NaN values."
+    if drop:
+      rcas = rcas_clone
   
   kp = rcas.sum(axis=0)
   kc = rcas.sum(axis=1)
