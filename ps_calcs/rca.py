@@ -15,7 +15,7 @@ def rca(tbl, populations=None):
 
   # we now need to transpose or "reshape" this array so that
   # it is in the form of one long column
-  col_sums = col_sums.reshape((len(col_sums), 1))
+  col_sums = col_sums.values.reshape((len(col_sums), 1))
 
   # create the numerator matrix for the final RCA calculation by
   # dividing each value by its row's sum

@@ -13,7 +13,7 @@ def complexity(rcas, drop=True):
   rcas_clone = rcas_clone.dropna(how="all", axis=1)
   
   if rcas_clone.shape != rcas.shape:
-    print "[Warning] RCAs contain columns or rows that are entirely comprised of NaN values."
+    print("[Warning] RCAs contain columns or rows that are entirely comprised of NaN values.")
     if drop:
       rcas = rcas_clone
   

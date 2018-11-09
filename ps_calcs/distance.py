@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 ''' Import statements '''
-import density
+from .density import density
 
 def distance(rcas, proximities):
   
-  return 1 - density.density(rcas, proximities)
+  return 1 - density(rcas, proximities)

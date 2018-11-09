@@ -18,7 +18,7 @@ def proximity(rcas):
 
   # kp0 is a vector of the number of munics with RCA in the given product
   kp0 = rcas.sum(axis=0)
-  kp0 = kp0.reshape((1, len(kp0)))
+  kp0 = kp0.values.reshape((1, len(kp0)))
 
   # transpose this to get the unions
   kp0_trans = kp0.T

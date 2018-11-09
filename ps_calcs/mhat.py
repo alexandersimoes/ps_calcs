@@ -6,8 +6,8 @@ import numpy as np
 try:
     import statsmodels.api as sm
 except ImportError as err:
-    print "Warning: failed to import statsmodels module. Unable to " \
-                        "run MHAT calculations. ({})".format(err)
+    print("Warning: failed to import statsmodels module. Unable to " \
+                        "run MHAT calculations. ({})".format(err))
 import pandas as pd
 
 def mhat(mcp, right_side, regression_type):

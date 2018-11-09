@@ -4,7 +4,7 @@
 import sys
 import numpy as np
 import pandas as pd
-import density
+from .density import density
 
 def opportunity_gain(rcas, proximities, pci):
   
@@ -23,7 +23,7 @@ def opportunity_gain(rcas, proximities, pci):
   middle = inverse_rcas * pci_matrix
   
   # get the density with the backwards bizzaro RCAs
-  dcp = density.density(1-rcas, proximities)
+  dcp = density(1-rcas, proximities)
   # now get the inverse
   dcp = 1-dcp
   # we now have the right-half of the equation
