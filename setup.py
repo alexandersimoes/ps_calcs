@@ -17,25 +17,27 @@ Resources
 from setuptools import setup
 import os
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
     name='ps_calcs',
-    version='1.0.0',
+    version='2.0.0',
     url='https://github.com/alexandersimoes/ps_calcs',
     license='MIT',
     author='Alexander Simoes',
     author_email='simoes@mit.edu',
     description='Product Space calculations.',
-    long_description=open(os.path.join(os.path.dirname(__file__), 'README.md')).read(),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     packages=[
         'ps_calcs'
     ],
     zip_safe=False,
     include_package_data=True,
     platforms='any',
-    install_requires=[x.strip() for x in
-            open(os.path.join(os.path.dirname(__file__),
-                'requirements.txt')).xreadlines()],
     classifiers=[
+        "Programming Language :: Python :: 3",
         'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Science/Research',

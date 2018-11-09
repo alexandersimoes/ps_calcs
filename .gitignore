@@ -1,3 +1,19 @@
+# OS generated files #
+######################
 .DS_store
 *.pyc
+
+# Data files #
+##############
 data/
+
+# Python files #
+################
+# setup.py working directory
+build
+# setup.py dist directory
+dist
+# Egg metadata
+*.egg-info
+.eggs
+.pypirc
